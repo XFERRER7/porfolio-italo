@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex w-full lg:px-16 px-8 py-20 mx-auto">
+    <main className="min-h-screen flex w-full lg:px-16 px-5 pg:py-20 py-5 mx-auto">
 
       <div className="h-full w-full flex flex-col gap-5 bg-[#070707] overflow-hidden">
 
@@ -23,11 +23,11 @@ export default function Home() {
 
         <div className="lg:grid lg:grid-cols-2 gap-12">
 
-          <div className="flex flex-col gap-5 text-lg">
+          <div className="flex flex-col lg:gap-5 gap-3 text-lg">
 
             <RecentWork />
 
-            <div className="lg:hidden flex flex-col gap-5">
+            <div className="lg:hidden flex flex-col lg:gap-5 gap-3">
 
               <LanguageCard />
 
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
 
 
-          <div className="flex flex-col gap-5 text-lg text-white lg:mt-0 mt-5">
+          <div className="flex flex-col lg:gap-5 gap-3 text-lg text-white lg:mt-0 mt-5">
 
             <div className="hidden lg:flex flex-col gap-5">
               <LanguageCard />

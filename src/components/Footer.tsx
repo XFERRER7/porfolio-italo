@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div className='w-full h-28 bg-primary-100 rounded-xl border-2 border-quaternary-100 flex justify-between items-center px-10'>
+    <div className='w-full lg:h-28 h-36 bg-primary-100 rounded-xl border-2 border-quaternary-100 flex justify-between items-center px-10 lg:flex-row flex-col-reverse py-4'>
 
       <h3 className='text-xl'>
         Italo Ruan Santos

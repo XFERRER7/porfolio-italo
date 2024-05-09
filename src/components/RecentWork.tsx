@@ -2,7 +2,7 @@ import { Dot } from "lucide-react"
 
 export const RecentWork = () => {
   return (
-    <div className="h-[31rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-10 px-10">
+    <div className="lg:h-[31rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-10 px-10">
 
 
       <div className="flex items-center">
@@ -69,7 +69,7 @@ const Item = ({ title, date, companyName, isCurrent }: IItemProps) => {
         <p className="text-quinternary-100 text-base">{date}</p>
       </div>
 
-      <p className="text-quinternary-100">
+      <p className="text-quinternary-100 text-right">
         {companyName}
       </p>
 

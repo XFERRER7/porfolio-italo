@@ -4,7 +4,7 @@ import iphoneImg from '@/assets/iPhone.png'
 
 export const ProductCard = () => {
   return (
-    <div className="h-[49rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-5 px-10">
+    <div className="lg:h-[49rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-5 px-10">
 
 
       <h3 className='font-semibold'>Mobile App</h3>

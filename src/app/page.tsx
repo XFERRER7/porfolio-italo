@@ -32,8 +32,8 @@ export default function Home() {
               <LanguageCard />
 
               <div className="flex gap-5">
-                <TechnologyCard name="IOS Developer" />
-                <TechnologyCard name="Android Developer" />
+                <TechnologyCard name="IOS Developer" mustApplyReverseGradient={false}/>
+                <TechnologyCard name="Android Developer" mustApplyReverseGradient={true}/>
               </div>
 
             </div>
@@ -44,13 +44,13 @@ export default function Home() {
 
 
           <div className="flex flex-col lg:gap-5 gap-3 text-lg text-white lg:mt-0 mt-5">
-
+            
             <div className="hidden lg:flex flex-col gap-5">
               <LanguageCard />
 
               <div className="flex gap-5">
-                <TechnologyCard name="IOS Developer" />
-                <TechnologyCard name="Android Developer" />
+                <TechnologyCard name="IOS Developer" mustApplyReverseGradient={false}/>
+                <TechnologyCard name="Android Developer" mustApplyReverseGradient={true}/>
               </div>
             </div>
 

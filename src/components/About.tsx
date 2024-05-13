@@ -1,21 +1,47 @@
+'use client'
 import { Copy, Plus } from "lucide-react"
 import Image from "next/image"
 import animationImg from "@/assets/animation.svg"
+import { motion } from "framer-motion"
+
+const container = {
+  visible: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.05
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 export const About = () => {
   return (
-    <div className="flex-1 bg-primary-100 border-2 border-quaternary-100 rounded-xl lg:px-14 px-5 lg:py-14 py-8">
+    <motion.div
+      className="flex-1 bg-primary-100 border-2 border-quaternary-100 rounded-xl lg:px-14 px-5 lg:py-14 py-8"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="h-full w-full text-quinternary-100">
 
-        <div className="flex flex-col justify-between lg:hidden gap-5">
+        <div className="flex flex-col justify-between mobile:hidden gap-5">
 
-          <div className="flex gap-2 w-48 items-center bg-[#161616] rounded-full p-1.5 px-4">
+          <motion.div
+          variants={item}
+          className="flex gap-2 w-48 items-center bg-[#161616] rounded-full p-1.5 px-4">
 
             <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
             <span className="text-xs">AVAILABLE FOR JOB</span>
 
-          </div>
+          </motion.div>
 
           <h1 className="text-2xl">
             Mobile Developer
@@ -23,7 +49,7 @@ export const About = () => {
 
         </div>
 
-        <div className="lg:flex items-center justify-between hidden">
+        <motion.div variants={item} className="mobile:flex items-center justify-between hidden">
           <h1 className="text-2xl">
             Mobile Developer
           </h1>
@@ -35,9 +61,9 @@ export const About = () => {
             <span className="text-xs">AVAILABLE FOR JOB</span>
 
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-32 h-32 bg-[#3F3E3E] rounded-full flex items-center justify-center lg:hidden mt-5">
+        <div className="w-32 h-32 bg-[#3F3E3E] rounded-full flex items-center justify-center mobile:hidden mt-5">
           <Image
             src={animationImg}
             alt="animation"
@@ -47,7 +73,7 @@ export const About = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between lg:mt-20 mt-5">
+        <motion.div variants={item} className="flex items-center justify-between mobile:mt-20 mt-5">
 
           <div className="flex flex-col gap-7 w-72">
 
@@ -80,7 +106,7 @@ export const About = () => {
           </div>
 
 
-          <div className="w-40 h-40 bg-[#3F3E3E] rounded-full lg:flex items-center justify-center hidden">
+          <div className="w-40 h-40 bg-[#3F3E3E] rounded-full mobile:flex items-center justify-center hidden">
             <Image
               src={animationImg}
               alt="animation"
@@ -90,9 +116,9 @@ export const About = () => {
             />
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
-    </div>
+    </motion.div>
   )
 }

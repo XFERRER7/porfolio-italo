@@ -1,6 +1,21 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-card {
+  background: #1B1B1B;
+  background: linear-gradient(43deg, rgba(27,27,27,1) 50%, rgba(230, 62, 33, 0.419)98%);
+}
+
+.reverse-gradient-card {
+  background: #1B1B1B;
+  background: linear-gradient(212deg, rgba(27,27,27,1) 50%, rgba(230, 62, 33, 0.419)98%);
+}
+  
+.gradient-border {
+  background: rgb(27,27,27);
+  background: linear-gradient(55deg, rgba(27,27,27,1) 0%, rgba(51,19,14,1) 85%, rgb(255, 44, 7) 100%);
+}   
 
   @layer base {
     :root {

@@ -88,6 +88,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
+        mobile: "540px",
         lg: "1116px",
       }
     },

@@ -6,7 +6,7 @@ export const RecentWork = () => {
 
 
       <div className="flex items-center">
-        <Dot size={40} className="font-bold" />
+        <Dot size={40} className="font-bold -ml-3" />
         <h3 className="font-semibold">Recent Work</h3>
       </div>
 

@@ -32,6 +32,16 @@
   background: linear-gradient(326deg, rgba(38,38,38,1) 48%, rgba(230,62,33,1) 100%);
 }
 
+.gradient-footer {
+  background: rgb(38,38,38);
+  background: linear-gradient(207deg, rgba(27,27,27,1) 70%, #601e14 98%);
+}
+
+.footer-gradient-border {
+  background: rgb(38,38,38);
+  background: linear-gradient(201deg, rgba(38,38,38,1) 79%, rgba(230,62,33,1) 100%);
+}
+
   @layer base {
     :root {
       --background: 0 0% 100%;

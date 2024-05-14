@@ -9,10 +9,10 @@ export const LinkedinCard = () => {
 
       <div className='flex items-center justify-between'>
         <div>
-          <h3 className='font-semibold'>My Linked in Profile</h3>
+          <h3 className='font-semibold underline'>My Linked in Profile</h3>
           <p className='text-quinternary-100 text-sm mt-1'>Come to meet me!</p>
         </div>
-        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button'>
+        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button hover:scale-110 transition-all cursor-pointer'>
           <MoveUpRight
             size={20}
             className='font-bold'

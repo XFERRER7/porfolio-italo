@@ -8,13 +8,16 @@ interface ITechnologyCardProps {
 export const TechnologyCard = ({ name, mustApplyReverseGradient }: ITechnologyCardProps) => {
 
   return (
-    <div 
-    className={`lg:h-32 h-24 w-1/2 relative overflow-hidden ${mustApplyReverseGradient ? 'reverse-gradient-card' : 'gradient-card'} rounded-xl flex items-center justify-center lg:text-lg text-base`}>
+    <div className={`w-1/2 gradient-border p-0.5 rounded-xl ${mustApplyReverseGradient ? 'reverse-gradient-border' : 'gradient-border'}`}>
+      <div
+        className={`lg:h-32 h-24 w-full relative overflow-hidden ${mustApplyReverseGradient ? 'reverse-gradient-card' : 'gradient-small-card'} rounded-xl flex items-center justify-center lg:text-lg text-base`}>
 
-      <p>
-        {name}
-      </p>
-      
+        <p>
+          {name}
+        </p>
+
+      </div>
     </div>
+
   )
 }

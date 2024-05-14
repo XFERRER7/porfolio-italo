@@ -52,10 +52,11 @@ export const Recomendations = () => {
 const Card = () => {
 
   return (
-    <div className='h-48 lg:w-[20rem] w-full bg-tertiary-100 rounded-3xl text-white flex flex-col gap-5 justify-center px-5 py-5'>
+    <div className='gradient-border p-[1.5px] rounded-3xl recomendation-card-border'>
+      <div className='h-48 lg:w-[20rem] w-full bg-tertiary-100 rounded-3xl text-white flex flex-col gap-5 justify-center px-5 py-5'>
 
-      <div className='flex items-center gap-3'>
-        {/* <Image 
+        <div className='flex items-center gap-3'>
+          {/* <Image 
           src='/images/face.jpg'
           alt='face'
           width={100}
@@ -63,18 +64,19 @@ const Card = () => {
           className='rounded-full'
         /> */}
 
-        <div className='h-12 w-12 rounded-full bg-quinternary-100' />
+          <div className='h-12 w-12 rounded-full bg-quinternary-100' />
 
-        <div>
-          <h4>John Doe</h4>
-          <p className='text-[10px]'>CEO at Company</p>
+          <div>
+            <h4>John Doe</h4>
+            <p className='text-[10px]'>CEO at Company</p>
+          </div>
         </div>
+
+        <p className='text-sm'>
+          s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+        </p>
+
       </div>
-
-      <p className='text-sm'>
-        s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-      </p>
-
     </div>
   )
 

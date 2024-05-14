@@ -3,6 +3,7 @@ import { Copy, Plus } from "lucide-react"
 import Image from "next/image"
 import animationImg from "@/assets/animation.svg"
 import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect'
 
 const container = {
   visible: {
@@ -34,8 +35,8 @@ export const About = () => {
         <div className="flex flex-col justify-between mobile:hidden gap-5">
 
           <motion.div
-          variants={item}
-          className="flex gap-2 w-48 items-center bg-[#161616] rounded-full p-1.5 px-4">
+            variants={item}
+            className="flex gap-2 w-48 items-center bg-[#161616] rounded-full p-1.5 px-4">
 
             <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
@@ -80,10 +81,18 @@ export const About = () => {
             <h2 className="text-3xl text-white">
               I’m Italo Ruan
             </h2>
-            <p className="lg:text-xl text-base">
-              Mobile developer since 2021, creator of an application with over 50,000 users. Committed to continuously improving User Experience.
-            </p>
 
+            <p className="lg:text-xl text-base h-36">
+              <Typewriter
+                options={{
+                  delay: 20,
+                }}
+                onInit={(typewriter) => {
+                  typewriter.typeString('Mobile developer since 2021, creator of an application with over 50,000 users. Committed to continuously improving User Experience.')
+                    .start()
+                }}
+              />
+            </p>
             <div className="flex gap-5 items-center">
               <div className="flex gap-0.5 h-10">
                 <button className="bg-secondary-100 text-white rounded-tl-lg rounded-bl-lg w-20 shadow-button">

@@ -18,7 +18,7 @@ export const AppCard = () => {
           </p>
         </div>
 
-        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button'>
+        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button hover:scale-110 transition-all cursor-pointer'>
           <MoveUpRight
             size={20}
             className='font-bold'

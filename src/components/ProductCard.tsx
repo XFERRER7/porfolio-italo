@@ -5,15 +5,15 @@ import { MoveUpRight } from 'lucide-react'
 
 export const ProductCard = () => {
   return (
-    <div className="lg:h-[49rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-5 px-10">
+    <div className="lg:h-[51rem] w-full bg-primary-100 rounded-xl border-2 border-quaternary-100 py-5 px-10">
 
       <div className='flex items-center justify-between'>
         <div>
-          <h3 className='font-semibold'>Mobile App</h3>
+          <h3 className='font-semibold underline'>Mobile App</h3>
           <p className='text-quinternary-100 text-sm mt-1'>Product Develop</p>
         </div>
 
-        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button'>
+        <div className='flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button hover:scale-110 transition-all cursor-pointer'>
           <MoveUpRight
             size={20}
             className='font-bold'

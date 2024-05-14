@@ -1,6 +1,10 @@
 import Image from "next/image";
 import groupBallsImg from "../assets/group-balls.svg";
 import { Menu } from "lucide-react";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { Input } from "postcss";
+import { Button } from "./ui/button";
+
 
 export const Navbar = () => {
   return (
@@ -19,11 +23,11 @@ export const Navbar = () => {
       {/* Navbar desktop */}
       <div className="flex-1 h-full bg-primary-100 border-2 border-quaternary-100 rounded-full lg:flex hidden items-center justify-around">
 
-        <span className="text-lg text-secondary-100">
+        <span className="text-lg">
           ABOUT
         </span>
 
-        <span className="text-lg">
+        <span className="text-lg text-secondary-100">
           PORTFOLIO
         </span>
 
@@ -40,7 +44,29 @@ export const Navbar = () => {
           ABOUT
         </span>
 
-        <Menu size={24} className="" />
+
+
+        <Sheet key={1}>
+          <SheetTrigger asChild>
+            <Menu size={24} />
+          </SheetTrigger>
+          <SheetContent side='bottom' className="bg-primary-100 h-[50vh] border-secondary-100">
+            <SheetHeader>
+              <SheetTitle className="text-secondary-100">PORTFOLIO</SheetTitle>
+            </SheetHeader>
+            <div className="flex flex-col justify-center items-center gap-5 h-full">
+
+              <span className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
+                About
+              </span>
+
+              <span className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
+                Contact
+              </span>
+
+            </div>
+          </SheetContent>
+        </Sheet>
 
       </div>
 

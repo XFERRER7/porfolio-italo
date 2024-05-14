@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-.gradient-card {
+.gradient-big-card {
   background: #1B1B1B;
-  background: linear-gradient(43deg, rgba(27,27,27,1) 50%, rgba(230, 62, 33, 0.419)98%);
+  background: linear-gradient(43deg, rgba(27,27,27,1) 60%, #601e14 98%);
+}
+
+.gradient-small-card {
+  background: #1B1B1B;
+  background: linear-gradient(43deg, rgba(27,27,27,1) 70%, #601e14 98%);
 }
 
 .reverse-gradient-card {
   background: #1B1B1B;
-  background: linear-gradient(212deg, rgba(27,27,27,1) 50%, rgba(230, 62, 33, 0.419)98%);
+  background: linear-gradient(212deg, rgba(27,27,27,1) 70%, #601e14 98%);
 }
   
 .gradient-border {
-  background: rgb(27,27,27);
-  background: linear-gradient(55deg, rgba(27,27,27,1) 0%, rgba(51,19,14,1) 85%, rgb(255, 44, 7) 100%);
-}   
+  background: rgb(38,38,38);
+  background: linear-gradient(55deg, rgba(38,38,38,1) 87%, rgba(230,62,33,1) 100%);
+}
+
+.reverse-gradient-border {
+  background: rgb(38,38,38);
+  background: linear-gradient(212deg, rgba(38,38,38,1) 70%, rgba(230,62,33,1) 98%);
+}
+
+.recomendation-card-border {
+  background: rgb(38,38,38);
+  background: linear-gradient(326deg, rgba(38,38,38,1) 48%, rgba(230,62,33,1) 100%);
+}
 
   @layer base {
     :root {

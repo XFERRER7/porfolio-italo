@@ -20,7 +20,6 @@ export default function Home() {
 
         <About />
 
-
         <div className="lg:grid lg:grid-cols-2 gap-12">
 
           <div className="flex flex-col lg:gap-5 gap-3 text-lg">

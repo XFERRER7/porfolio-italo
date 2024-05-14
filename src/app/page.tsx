@@ -1,3 +1,4 @@
+'use client'
 import { About } from "@/components/About"
 import { LanguageCard } from "@/components/LanguageCard"
 import { LinkedinCard } from "@/components/LinkedinCard"

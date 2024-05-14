@@ -1,6 +1,10 @@
+import { useLanguage } from '@/hooks/useLanguage'
 import React from 'react'
 
 export const Footer = () => {
+
+  const { translations } = useLanguage()
+
   return (
     <div className='p-[1.5px] rounded-xl footer-gradient-border'>
       <div className='w-full lg:h-28 h-36 gradient-footer rounded-xl flex justify-between items-center px-10 lg:flex-row flex-col-reverse py-4'>
@@ -22,7 +26,7 @@ export const Footer = () => {
 
           <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
-          <span className="text-[10px]">AVAILABLE FOR JOB</span>
+          <span className="text-[10px]">{translations.footer.availableForJob}</span>
 
         </div>
 

@@ -4,6 +4,7 @@ import Image from "next/image"
 import animationImg from "@/assets/animation.svg"
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect'
+import { useLanguage } from "@/hooks/useLanguage"
 
 const container = {
   visible: {
@@ -23,6 +24,8 @@ const item = {
 };
 
 export const About = () => {
+  const { translations } = useLanguage();
+
   return (
     <motion.div
       className="flex-1 bg-primary-100 border-2 border-quaternary-100 rounded-xl lg:px-14 px-5 lg:py-14 py-8"
@@ -40,26 +43,26 @@ export const About = () => {
 
             <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
-            <span className="text-xs">AVAILABLE FOR JOB</span>
+            <span className="text-xs">{translations.about.availableForJob}</span>
 
           </motion.div>
 
           <h1 className="text-2xl">
-            Mobile Developer
+            {translations.about.title}
           </h1>
 
         </div>
 
         <motion.div variants={item} className="mobile:flex items-center justify-between hidden">
           <h1 className="text-2xl">
-            Mobile Developer
+            {translations.about.title}
           </h1>
 
           <div className="flex gap-2 items-center justify-center bg-[#161616] rounded-full p-1 px-4">
 
             <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
-            <span className="text-xs">AVAILABLE FOR JOB</span>
+            <span className="text-xs">{translations.about.availableForJob}</span>
 
           </div>
         </motion.div>
@@ -88,7 +91,7 @@ export const About = () => {
                   delay: 20,
                 }}
                 onInit={(typewriter) => {
-                  typewriter.typeString('Mobile developer since 2021, creator of an application with over 50,000 users. Committed to continuously improving User Experience.')
+                  typewriter.typeString(translations.about.description)
                     .start()
                 }}
               />
@@ -96,7 +99,7 @@ export const About = () => {
             <div className="flex gap-5 items-center">
               <div className="flex gap-0.5 h-10">
                 <button className="bg-secondary-100 text-white rounded-tl-lg rounded-bl-lg w-20 shadow-button">
-                  Hire me
+                  {translations.about.hireButton}
                 </button>
                 <div className="w-7 bg-secondary-100 rounded-tr-lg rounded-br-lg flex items-center justify-center  shadow-button">
                   <Plus size={20} className="text-white" />
@@ -104,7 +107,7 @@ export const About = () => {
               </div>
               <div className="flex h-9">
                 <button className="w-28 bg-[#161616] rounded flex items-center justify-center gap-1 border border-quaternary-100 rounded-tr-none rounded-br-none">
-                  Copy Email
+                  {translations.about.copyEmailButton}
                 </button>
                 <div className="flex items-center justify-center border border-quaternary-100 bg-[#161616] px-2 rounded-tr-lg rounded-br-lg">
                   <Copy size={16} className="text-white" />

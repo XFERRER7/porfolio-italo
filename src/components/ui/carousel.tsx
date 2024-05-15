@@ -114,6 +114,8 @@ const Carousel = React.forwardRef<
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
+      const autoScroll = api?.plugins()?.autoScroll
+      if (!autoScroll) return
 
       return () => {
         api?.off("select", onSelect)

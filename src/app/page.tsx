@@ -9,6 +9,7 @@ import { TechnologyCard } from "@/components/TechnologyCard"
 import { AppCard } from "@/components/AppCard"
 import { Recomendations } from "@/components/Recomendations"
 import { Footer } from "@/components/Footer"
+import { Toaster } from "@/components/ui/toaster"
 
 
 export default function Home() {
@@ -66,6 +67,7 @@ export default function Home() {
 
         <Footer />
 
+        <Toaster />
       </div>
 
     </main>

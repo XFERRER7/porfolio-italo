@@ -24,7 +24,8 @@ export const pt = {
     title: "Desenvolvedor Mobile",
     description: "Desenvolvedor mobile desde 2021, criador de um aplicativo com mais de 50.000 usuários. Comprometido em melhorar continuamente a experiência do usuário.",
     hireButton: "Contrate-me",
-    copyEmailButton: "Copiar Email"
+    copyEmailButton: "Copiar Email",
+    toastTitle: "Email copiado para a área de transferência!"
   },
   recentWork: {
     title: "Trabalhos Recentes",
@@ -158,7 +159,8 @@ export const en = {
     title: "Mobile Developer",
     description: "Mobile developer since 2021, creator of an application with over 50,000 users. Committed to continuously improving User Experience.",
     hireButton: "Hire me",
-    copyEmailButton: "Copy Email"
+    copyEmailButton: "Copy Email",
+    toastTitle: "Email copied to clipboard!"
   },
   recentWork: {
     title: "Recent Work",

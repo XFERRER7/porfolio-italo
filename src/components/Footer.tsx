@@ -6,7 +6,7 @@ export const Footer = () => {
   const { translations } = useLanguage()
 
   return (
-    <div className='p-[1.5px] rounded-xl footer-gradient-border'>
+    <div className='p-[1.5px] rounded-xl footer-gradient-border' id='contact'>
       <div className='w-full lg:h-28 h-36 gradient-footer rounded-xl flex justify-between items-center px-10 lg:flex-row flex-col-reverse py-4'>
 
         <h3 className='text-xl'>
@@ -16,9 +16,9 @@ export const Footer = () => {
 
         <ul>
           <li className='flex gap-3'>
-            <a href="" className='text-secondary-100'>Github</a>
-            <a href="">Whatsapp</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/dellfinn" target='_blank' className='text-secondary-100'>Github</a>
+            <a href="https://wa.me/5562982272474?text=Ol%C3%A1+Italo%21" target='_blank'>Whatsapp</a>
+            <a href="https://www.linkedin.com/in/italoruan/" target='_blank'>LinkedIn</a>
           </li>
         </ul>
 

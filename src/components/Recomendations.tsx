@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export const Recomendations = () => {
   const { translations } = useLanguage();
-
+ 
   return (
     <div className='w-full lg:h-80 bg-primary-100 rounded-xl border-2 border-quaternary-100 py-8 px-14'>
       <h3 className='font-semibold text-lg'>{translations.recommendations.title}</h3>

@@ -13,10 +13,14 @@ export const LinkedinCard = () => {
 
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="font-semibold underline">{translations.linkedinCard.title}</h3>
+          <a href='https://www.linkedin.com/in/italoruan/' target='_blank' className="font-semibold underline">{translations.linkedinCard.title}</a>
           <p className="text-quinternary-100 text-sm mt-1">{translations.linkedinCard.description}</p>
         </div>
-        <div className="flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button hover:scale-110 transition-all cursor-pointer">
+        <div className="flex items-center justify-center p-2 bg-secondary-100 rounded-full shadow-button hover:scale-110 transition-all cursor-pointer" 
+        onClick={() => {
+          window.open('https://www.linkedin.com/in/italoruan')
+        }}
+        >
           <MoveUpRight size={20} className="font-bold" />
         </div>
       </div>

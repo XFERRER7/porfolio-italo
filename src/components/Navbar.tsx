@@ -24,26 +24,26 @@ export const Navbar = () => {
       {/* Navbar desktop */}
       <div className="flex-1 h-full bg-primary-100 border-2 border-quaternary-100 rounded-full lg:flex hidden items-center justify-around">
 
-        <span className="text-lg">
+        <a href='#about' className="text-lg">
           {translations.navbar.about.title}
-        </span>
+        </a>
 
-        <span className="text-lg text-secondary-100">
+        <a href='#' className="text-lg text-secondary-100">
           {translations.navbar.portfolio.title}
-        </span>
+        </a>
 
-        <span className="text-lg">
+        <a href='#contact' className="text-lg">
           {translations.navbar.contact.title}
-        </span>
+        </a>
 
       </div>
 
       {/* Navbar mobile */}
       <div className="flex-1 h-full bg-primary-100 border-2 border-quaternary-100 rounded-full lg:hidden flex items-center justify-between px-5">
 
-        <span className="text-lg text-secondary-100">
+        <a href='#' className="text-lg text-secondary-100">
           {translations.navbar.about.title}
-        </span>
+        </a>
 
         <Sheet key={1}>
           <SheetTrigger asChild>
@@ -55,13 +55,13 @@ export const Navbar = () => {
             </SheetHeader>
             <div className="flex flex-col justify-center items-center gap-5 h-full">
 
-              <span className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
+              <a href='#about' className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
                 {translations.navbar.about.title}
-              </span>
+              </a>
 
-              <span className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
+              <a href='#contact' className="text-lg font-bold w-full border-b border-tertiary-100 text-center py-2">
                 {translations.navbar.contact.title}
-              </span>
+              </a>
 
             </div>
           </SheetContent>

@@ -5,6 +5,10 @@ import animationImg from "@/assets/animation.svg"
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect'
 import { useLanguage } from "@/hooks/useLanguage"
+import { Switch } from "./ui/switch"
+import useLanguageStore from "@/store/langStore"
+import { useEffect, useState } from "react"
+import { useToast } from "./ui/use-toast"
 
 const container = {
   visible: {
@@ -24,22 +28,44 @@ const item = {
 };
 
 export const About = () => {
+
   const { translations } = useLanguage();
+  const { language, setLanguage } = useLanguageStore()
+  const { toast } = useToast()
+
+  const [key, setKey] = useState(Date.now());
+
+  useEffect(() => {
+    setKey(Date.now());
+  }, [translations]);
 
   return (
     <motion.div
-      className="flex-1 bg-primary-100 border-2 border-quaternary-100 rounded-xl lg:px-14 px-5 lg:py-14 py-8"
+      className="lg:h-[32.5rem] h-auto bg-primary-100 border-2 border-quaternary-100 rounded-xl lg:px-14 px-5 lg:py-14 py-8 relative"
       variants={container}
       initial="hidden"
       animate="visible"
+      id="about"
     >
+
+      <div className="flex items-center gap-3 text-sm absolute top-2 right-2">
+        <span>EN</span>
+        <Switch
+          className="data-[state=checked]:bg-zinc-700 data-[state=unchecked]:bg-zinc-700"
+          onClick={() => {
+            setLanguage(language === 'en' ? 'pt' : 'en')
+          }}
+        />
+        <span>PT</span>
+      </div>
+
       <div className="h-full w-full text-quinternary-100">
 
         <div className="flex flex-col justify-between mobile:hidden gap-5">
 
           <motion.div
             variants={item}
-            className="flex gap-2 w-48 items-center bg-[#161616] rounded-full p-1.5 px-4">
+            className="flex gap-2 justify-center w-60 items-center bg-[#161616] rounded-full p-1.5 px-2">
 
             <div className="w-4 h-4 bg-secondary-100 rounded-full" />
 
@@ -67,7 +93,31 @@ export const About = () => {
           </div>
         </motion.div>
 
-        <div className="w-32 h-32 bg-[#3F3E3E] rounded-full flex items-center justify-center mobile:hidden mt-5">
+        <motion.div
+          animate={["initial"]}
+          whileHover={["grow"]}
+          variants={{
+            grow: {
+              scale: 1.1
+            },
+            rotate: {
+              rotate: [null, -5, 5, 0],
+              transition: {
+                duration: 10
+              }
+            },
+            initial: {
+              y: [-5, 5],
+              rotate: 0,
+              transition: {
+                delay: 0.3,
+                duration: 2,
+                repeat: Infinity,
+                // repeatDelay: 0.2,
+                repeatType: "reverse"
+              }
+            }
+          }} className="w-32 h-32 bg-[#3F3E3E] rounded-full flex items-center justify-center mobile:hidden mt-5">
           <Image
             src={animationImg}
             alt="animation"
@@ -75,7 +125,7 @@ export const About = () => {
             height={159}
             className="object-cover"
           />
-        </div>
+        </motion.div>
 
         <motion.div variants={item} className="flex items-center justify-between mobile:mt-20 mt-5">
 
@@ -85,27 +135,40 @@ export const About = () => {
               I’m Italo Ruan
             </h2>
 
-            <p className="lg:text-xl text-base h-36">
+            <div className="lg:text-xl text-base h-36">
               <Typewriter
+                key={key} // This ensures the Typewriter re-renders when the key changes
                 options={{
                   delay: 20,
                 }}
                 onInit={(typewriter) => {
-                  typewriter.typeString(translations.about.description)
-                    .start()
+                  typewriter.typeString(translations.about.description).start();
                 }}
+                component={motion.p}
               />
-            </p>
-            <div className="flex gap-5 items-center">
-              <div className="flex gap-0.5 h-10">
-                <button className="bg-secondary-100 text-white rounded-tl-lg rounded-bl-lg w-20 shadow-button">
+            </div>
+            <div className="flex gap-5 items-center mt-3">
+              <div className="flex gap-0.5 h-10 hover:scale-105 transition-all">
+                <button className={`bg-secondary-100 text-white rounded-tl-lg rounded-bl-lg w-28 shadow-button`}
+                  onClick={() => {
+                    window.open('https://www.linkedin.com/in/italoruan')
+                  }}
+                >
                   {translations.about.hireButton}
                 </button>
                 <div className="w-7 bg-secondary-100 rounded-tr-lg rounded-br-lg flex items-center justify-center  shadow-button">
                   <Plus size={20} className="text-white" />
                 </div>
               </div>
-              <div className="flex h-9">
+              <div className="flex h-9 hover:scale-105 transition-all"
+                onClick={() => {
+                  navigator.clipboard.writeText('italodev@protonmail.com')
+                  toast({
+                    title: translations.about.toastTitle,
+                    duration: 1500,
+                  })
+                }}
+              >
                 <button className="w-28 bg-[#161616] rounded flex items-center justify-center gap-1 border border-quaternary-100 rounded-tr-none rounded-br-none">
                   {translations.about.copyEmailButton}
                 </button>
@@ -118,7 +181,33 @@ export const About = () => {
           </div>
 
 
-          <div className="w-40 h-40 bg-[#3F3E3E] rounded-full mobile:flex items-center justify-center hidden">
+
+          <motion.div
+            animate={["initial"]}
+            whileHover={["grow"]}
+            variants={{
+              grow: {
+                scale: 1.1
+              },
+              rotate: {
+                rotate: [null, -5, 5, 0],
+                transition: {
+                  duration: 10
+                }
+              },
+              initial: {
+                y: [-5, 5],
+                rotate: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 2,
+                  repeat: Infinity,
+                  // repeatDelay: 0.2,
+                  repeatType: "reverse"
+                }
+              }
+            }}
+            className="w-40 h-40 bg-[#3F3E3E] rounded-full mobile:flex items-center justify-center hidden">
             <Image
               src={animationImg}
               alt="animation"
@@ -126,7 +215,7 @@ export const About = () => {
               height={159}
               className="object-cover"
             />
-          </div>
+          </motion.div>
 
         </motion.div>
 

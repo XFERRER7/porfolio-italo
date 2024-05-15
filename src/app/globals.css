@@ -42,6 +42,14 @@
   background: linear-gradient(201deg, rgba(38,38,38,1) 79%, rgba(230,62,33,1) 100%);
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
   @layer base {
     :root {
       --background: 0 0% 100%;

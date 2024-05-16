@@ -13,12 +13,11 @@ export const Footer = () => {
           Italo Ruan Santos
         </h3>
 
-
         <ul>
           <li className='flex gap-3'>
-            <a href="https://github.com/dellfinn" target='_blank' className='text-secondary-100'>Github</a>
-            <a href="https://wa.me/5562982272474?text=Ol%C3%A1+Italo%21" target='_blank'>Whatsapp</a>
-            <a href="https://www.linkedin.com/in/italoruan/" target='_blank'>LinkedIn</a>
+            <a href="https://github.com/dellfinn" target='_blank' className='hover:text-secondary-100 transition-colors'>Github</a>
+            <a href="https://wa.me/5562982272474?text=Ol%C3%A1+Italo%21" target='_blank' className='hover:text-secondary-100 transition-colors'>Whatsapp</a>
+            <a href="https://www.linkedin.com/in/italoruan/" target='_blank' className='hover:text-secondary-100 transition-colors'>LinkedIn</a>
           </li>
         </ul>
 

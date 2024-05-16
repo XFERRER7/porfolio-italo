@@ -7,12 +7,12 @@ export const pt = {
       description: "Esta é uma descrição de exemplo em português."
     },
     about: {
-      title: "Sobre Nós",
-      description: "Saiba mais sobre nossa empresa."
+      title: "Sobre mim",
+      description: "Saiba mais sobre mim."
     },
     contact: {
-      title: "Contate-nos",
-      description: "Entre em contato conosco."
+      title: "Contato",
+      description: "Entre em contato."
     },
     portfolio: {
       title: "Portfólio",
@@ -22,7 +22,7 @@ export const pt = {
   about: {
     availableForJob: "DISPONÍVEL PARA TRABALHO",
     title: "Desenvolvedor Mobile",
-    description: "Desenvolvedor mobile desde 2021, criador de um aplicativo com mais de 50.000 usuários. Comprometido em melhorar continuamente a experiência do usuário.",
+    description: "Desenvolvedor mobile desde 2021, criador de um aplicativo com mais de 50 mil usuários. Comprometido com a constante melhoria da Experiência do Usuário.",
     hireButton: "Contrate-me",
     copyEmailButton: "Copiar Email",
     toastTitle: "Email copiado para a área de transferência!"
@@ -31,27 +31,27 @@ export const pt = {
     title: "Trabalhos Recentes",
     items: [
       {
-        title: "Engenheiro de Software Móvel Embarcado",
+        title: "Engenheiro de Software Mobile Embarcado",
         date: "Abril de 2023 - Presente",
         companyName: "CPQD"
       },
       {
-        title: "Engenheiro de Software Móvel",
+        title: "Engenheiro de Software Mobile",
         date: "Junho de 2022 - Maio de 2023",
         companyName: "060 Tecnologia"
       },
       {
-        title: "Engenheiro de Software Móvel",
+        title: "Engenheiro de Software Mobile",
         date: "Janeiro de 2022 - Março de 2023",
         companyName: "PetWiz"
       },
       {
-        title: "Engenheiro de Software Móvel",
+        title: "Engenheiro de Software Mobile",
         date: "Novembro de 2021 - Agosto de 2023",
         companyName: "Kiwi Manga"
       },
       {
-        title: "Engenheiro de Software Móvel",
+        title: "Engenheiro de Software Mobile",
         date: "Setembro de 2023 - Presente",
         companyName: "Wealt"
       }
@@ -142,12 +142,12 @@ export const en = {
       description: "This is a sample description in English."
     },
     about: {
-      title: "About Us",
-      description: "Learn more about our company."
+      title: "About me",
+      description: "Learn more about me."
     },
     contact: {
-      title: "Contact Us",
-      description: "Get in touch with us."
+      title: "Contact",
+      description: "Get in touch."
     },
     portfolio: {
       title: "Portfolio",

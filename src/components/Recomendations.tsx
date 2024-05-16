@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {
   Carousel,
   CarouselContent,
@@ -7,11 +7,18 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useLanguage } from '@/hooks/useLanguage'
-import Image from 'next/image';
+import Image from 'next/image'
+import Autoplay from "embla-carousel-autoplay"
 
 export const Recomendations = () => {
-  const { translations } = useLanguage();
+  
+  const { translations } = useLanguage()
  
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+ 
+  
   return (
     <div className='w-full lg:h-80 bg-primary-100 rounded-xl border-2 border-quaternary-100 py-8 px-14'>
       <h3 className='font-semibold text-lg'>{translations.recommendations.title}</h3>
@@ -22,6 +29,7 @@ export const Recomendations = () => {
           opts={{
             align: "start",
           }}
+          plugins={[plugin.current]}
           className="w-full"
         >
           <CarouselContent>
